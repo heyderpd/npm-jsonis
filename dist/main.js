@@ -45,7 +45,7 @@ var identJSONstr = function identJSONstr(obj) {
     } else {
       var _ret = function () {
         var lines = [];
-        doEach(obj, function (key, value) {
+        each(obj, function (key, value) {
           value = identJSONstr(value, tabIn, ident, R);
           lines.push(tabIn + '"' + key + '": ' + value);
         });
@@ -63,16 +63,11 @@ var main = function main(obj) {
   return identJSONstr(obj);
 };
 
-var length = function length(obj) {
-  return getKeys(obj).length;
-};
-var getKeys = function getKeys(obj) {
-  return Object.keys(obj);
-};
-var doEach = function doEach(obj, func) {
-  return getKeys(obj).forEach(function (n) {
-    return func(n, obj[n]);
-  });
-};
+var _require = require('pytils');
+
+var length = _require.length;
+var keys = _require.keys;
+var each = _require.each;
+
 
 module.exports = main;

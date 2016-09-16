@@ -37,7 +37,7 @@ const identJSONstr = (obj, tabOld = '', ident = 0, R) => {
       return `${sta}${end}`
     } else {
       let lines = []
-      doEach(obj, (key, value) => {
+      each(obj, (key, value) => {
         value = identJSONstr(value, tabIn, ident, R)
         lines.push(`${tabIn}"${key}": ${value}`)
       })
@@ -48,8 +48,6 @@ const identJSONstr = (obj, tabOld = '', ident = 0, R) => {
 
 const main = (obj) => identJSONstr(obj)
 
-const length = obj => getKeys(obj).length
-const getKeys = obj => Object.keys(obj)
-const doEach = (obj, func) => getKeys(obj).forEach(n => func(n, obj[n]))
+const { length, keys, each } = require('pytils')
 
 module.exports = main
