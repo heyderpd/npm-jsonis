@@ -1,6 +1,6 @@
 {
   "name": "jsonis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "convert JSON object to INDENTED stringify",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,10 @@
   "author": "NPM jsonis <heyderpd@gmail.com> (http://heyderpd.github.io)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyderpd/npm-cleardep.git"
+    "url": "git+https://github.com/heyderpd/npm-jsonis.git"
   },
   "bugs": {
-    "url": "https://github.com/heyderpd/npm-cleardep/issues"
+    "url": "https://github.com/heyderpd/npm-jsonis/issues"
   },
   "license": "ISC",
   "devDependencies": {
