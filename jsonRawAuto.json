@@ -1,0 +1,27 @@
+{
+  "license": "MIT",
+  "name": "jsonis",
+  "version": "1.1.3",
+  "description": "convert JSON object to INDENTED stringify",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "json",
+    "object",
+    "indented",
+    "stringify",
+    "auto"
+  ],
+  "author": "NPM jsonis <heyderpd@gmail.com> (http://heyderpd.github.io)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyderpd/npm-jsonis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heyderpd/npm-jsonis/issues"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "pytils": "^0.14.2"
+  }
+}

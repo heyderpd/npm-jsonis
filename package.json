@@ -1,33 +1,19 @@
 {
-  "name": "jsonis",
-  "version": "1.1.3",
-  "description": "convert JSON object to INDENTED stringify",
-  "main": "index.js",
+  "license": "MIT",
+  "author": "NPM cleardep <heyderpd@gmail.com> (http://heyderpd.github.io)",
+  "version": "0.0.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile": "babel src/ -d dist/"
+    "transpile": "babel src/ --out-file npm/index.js",
+    "test": "mocha --compilers js:babel-register --reporter spec 'test/*.spec.js'",
+    "build": "npm run transpile | npm run test",
+    "web": "webpack --config"
   },
-  "keywords": [
-    "json",
-    "object",
-    "indented",
-    "stringify",
-    "auto"
-  ],
-  "author": "NPM jsonis <heyderpd@gmail.com> (http://heyderpd.github.io)",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/heyderpd/npm-jsonis.git"
-  },
-  "bugs": {
-    "url": "https://github.com/heyderpd/npm-jsonis/issues"
-  },
-  "license": "ISC",
   "devDependencies": {
-    "babel-cli": "^6.14.0",
-    "babel-preset-es2015": "^6.14.0"
-  },
-  "dependencies": {
-    "pytils": "^0.14.2"
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "webpack": "^1.13.2"
   }
 }

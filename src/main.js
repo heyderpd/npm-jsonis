@@ -37,10 +37,17 @@ const identJSONstr = (obj, tabOld = '', ident = 0, R) => {
       return `${sta}${end}`
     } else {
       let lines = []
-      each(obj, (key, value) => {
-        value = identJSONstr(value, tabIn, ident, R)
-        lines.push(`${tabIn}"${key}": ${value}`)
-      })
+      if (type === Object) {
+        each(obj, (key, value) => {
+          value = identJSONstr(value, tabIn, ident, R)
+          lines.push(`${tabIn}"${key}": ${value}`)
+        })        
+      } else {
+        each(obj, (key, value) => {
+          value = identJSONstr(value, tabIn, ident, R)
+          lines.push(`${tabIn}${value}`)
+        })
+      }
       return `${sta}\n${lines.join(',\n')}\n${tabOld}${end}`
     }
   }
